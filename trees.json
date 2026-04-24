@@ -1,0 +1,25 @@
+[
+  {
+    "id": "pn-001",
+    "species_code": "nigra",
+    "lat": 52.2297,
+    "lng": 21.0122,
+    "status": "healthy",
+    "notes": "Okazałe drzewo w parku nad Wisłą.",
+    "photos": [
+      "/photos/pn-001/1.jpg",
+      "/photos/pn-001/2.jpg"
+    ]
+  },
+  {
+    "id": "pa-001",
+    "species_code": "alba",
+    "lat": 49.99011,
+    "lng": 20.89328,
+    "status": "healthy",
+    "notes": "Zdrowy osobnik w dolinie rzecznej.",
+    "photos": [
+      "/photos/pa-001/1.jpg"
+    ]
+  }
+]

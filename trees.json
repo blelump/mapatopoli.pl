@@ -2,24 +2,33 @@
   {
     "id": "pn-001",
     "species_code": "nigra",
-    "lat": 52.2297,
-    "lng": 21.0122,
-    "status": "healthy",
-    "notes": "Okazałe drzewo w parku nad Wisłą.",
+    "lat": 49.987694,
+    "lng": 20.887611,
+    "status": "declining",
     "photos": [
-      "/photos/pn-001/1.jpg",
-      "/photos/pn-001/2.jpg"
+      "/photos/pn-001/1.jpg"
     ]
   },
   {
-    "id": "pa-001",
-    "species_code": "alba",
-    "lat": 49.99011,
-    "lng": 20.89328,
-    "status": "healthy",
-    "notes": "Zdrowy osobnik w dolinie rzecznej.",
+    "id": "pn-002",
+    "species_code": "nigra",
+    "status": "declining",
+    "lat": 49.996222,
+    "lng": 20.950806,
     "photos": [
-      "/photos/pa-001/1.jpg"
+      "/photos/pn-002/1.jpg",
+      "/photos/pn-002/2.jpg",
+      "/photos/pn-002/3.jpg"
+    ]
+  },
+  {
+    "id": "pn-003",
+    "species_code": "nigra",
+    "status": "declining",
+    "lat": 50.000611,
+    "lng": 20.896861,
+    "photos": [
+      "/photos/pn-003/1.jpg"
     ]
   }
 ]

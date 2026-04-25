@@ -51,8 +51,17 @@ function useHashRouter() {
     window.location.hash = path;
   }, []);
 
-  const route = hash.startsWith("/tree/") ? "/" : hash;
+  const route = hash.startsWith("/tree/") ? "/" : (hash === "/jak-mozesz-pomoc" ? "/dlaczego-to-robimy" : hash);
   const focusedTreeId = hash.startsWith("/tree/") ? hash.slice(6) : null;
+  const scrollTarget = hash === "/jak-mozesz-pomoc" ? "jak-mozesz-pomoc" : (hash === "/dlaczego-to-robimy" ? "dlaczego-to-robimy" : null);
+
+  useEffect(() => {
+    if (!scrollTarget) return;
+    const timer = window.setTimeout(() => {
+      document.getElementById(scrollTarget)?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+    return () => window.clearTimeout(timer);
+  }, [scrollTarget]);
 
   return { route, focusedTreeId, navigate };
 }
@@ -61,8 +70,9 @@ function AboutPage() {
   return (
     <section className="px-3 py-12 md:px-6 md:py-20">
       <div className="mx-auto max-w-2xl">
-        <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">Dlaczego to robimy?</h1>
+
         <div className="mt-8 space-y-6 text-base leading-7 text-stone-600 md:text-lg md:leading-8">
+          <h1 id="dlaczego-to-robimy" className="text-4xl font-semibold tracking-tight md:text-5xl">Dlaczego to robimy?</h1>
           <p>
             Ta strona powstała, aby w jednym miejscu zebrać i udokumentować stanowiska topoli czarnej i białej rosnących w Polsce. Chodzi o drzewa dojrzałe, stare i zamierające, które zazwyczaj nie mają żadnej formalnej ochrony, a są kluczowym elementem ekosystemów rzecznych i lasów łęgowych.
     <br/>
@@ -75,7 +85,7 @@ function AboutPage() {
             Topola czarna (<em>Populus nigra</em>) to gatunek rodzimy, związany z dolinami największych polskich rzek. Jej populacje kurczą się z powodu regulacji rzek i przekształceniu dawnych lasów łęgowych w żyzne pola uprawne.
     <br/>
     <br/>
-    Szczególny problem, w zasadzie w skali kraju, jest z topolą czarną, gdzie obserwuje się zanikanie naturalnych siedlisk oraz krzyżowanie się z jej mieszańcami, sztucznie wyhodowanymi przez człowieka (Populus × canadensis Moench).<br />
+    Szczególny problem, w zasadzie w skali kraju, jest z topolą czarną, gdzie obserwuje się zanikanie naturalnych siedlisk oraz krzyżowanie się z jej mieszańcami, sztucznie wyhodowanymi przez człowieka (Populus × canadensis Moench), nasadzanymi na terenie naszego kraju już w XVIII wieku(!).<br />
 
     <br/>
     Poniżej cytat z pracy <a href="https://www.nature.com/articles/s41598-025-86994-w">"Genetic structure and divergence of marginal populations of black poplar (Populus nigra L.) in Poland"</a>, która wprost definiuje problem:
@@ -86,6 +96,45 @@ function AboutPage() {
     [...]<br/>
 Topola czarna nie jest prawnie chroniona w Polsce. Jej populacje stają się coraz mniejsze, a większość drzew jest w zaawansowanym wieku i w złej kondycji zdrowotnej. Większe skupiska osobników nadal występują wzdłuż głównych dolin rzecznych, jednak gatunek ten osiąga północną granicę swojego zasięgu w kraju. Naturalna regeneracja poprzez rozmnażanie płciowe zachodzi niemal wyłącznie w środkowym biegu Wisły, która jest największą rzeką w Polsce. Najgorszą sytuację można zaobserwować wzdłuż dwóch najbardziej przekształconych dolin rzecznych, tj. Odry i Warty.
     </blockquote>
+          <h3>Podobne działania w innych krajach</h3>
+          <p>
+            Wielka Brytania podjęła się trudu zinwentaryzowania topoli czarnych, co z kolei pokazało skalę problemu. Oddolne ruchy społeczne, np. <a href="https://www.treesfordorset.co.uk/blackpopular">Trees of Dorset</a> organizują społeczności w celu nasadzeń klonów uzyskanych drogą wegetatywną.
+          </p>
+        </div>
+
+        <div className="mt-16 space-y-6 text-base leading-7 text-stone-600 md:text-lg md:leading-8">
+          <h1 id="jak-mozesz-pomoc" className="text-4xl font-semibold tracking-tight md:text-5xl">Jak możesz pomóc?</h1>
+          <p>
+            Każde nowe stanowisko, które trafi na mapę, to kolejny krok do lepszego zrozumienia sytuacji topoli w Polsce. Nie potrzebujesz specjalistycznego sprzętu ani wykształcenia.
+          </p>
+          <h3>Jak rozpoznać topolę?</h3>
+          <p>
+            Rozpoznawanie topoli, zarówno białych i czarnych wymaga pewnego treningu i samozaparcia. Jednym z fascynujących aspektów tych topoli jest to, że jest ich tak dużo, a wyróżnione gatunki w botanice, jak właśnie rodzima topola biała i czarna, posiadają szereg mieszańców, które ogólnie rzecz biorąc nie upraszczają sprawy.
+    <br/>
+    <br/>
+            Bardzo dobrym źródłem wiedzy dostępnej online o topolach jest <a href="https://populusportal.pl/">ta strona</a> oraz <a href="https://www.drzewa.nk4.netmark.pl/index.php">ta strona</a>.
+          </p>
+          <h3>Znalazłeś topolę?</h3>
+          <p>
+            Jeśli sądzisz, że znalazłeś drzewo, które może być topolą czarną lub białą, sfotografuj je, określ lokalizację (najprościej GPS z pinezki na Google Maps) i oceń jego kondycję.           </p>
+          <h3>Dodawanie topoli do mapy</h3>
+          <p>
+    Aktualnie strona nie posiada żadnego formularza, który pozwoliłby na automatyczną obsługę zgłoszenia dodania drzewa do mapy, ale jeśli zgłoszeń będzie dużo, to się o tym pomyśli. Póki co zostaje opcja poprzez <a href="https://github.com/blelump/mapatopoli.pl">Github</a> (zgłoś issue), gdzie strona obecnie jest hostowana.
+    <br/>
+    <br/>
+    Do dodania drzewa niezbędne będą:
+    <ul>
+    <li>
+    lokalizacja GPS,     </li>
+    <li>
+    opcjonalnie (lecz preferowane) zdjęcia oraz np. dodatkowe, interesujące uwagi
+
+    </li>
+    <li>
+    dodatkowe, interesujące uwagi
+    </li>
+    </ul>
+          </p>
         </div>
       </div>
     </section>
@@ -440,6 +489,7 @@ export default function App() {
           <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-stone-600">
             <a href="#/" className="hover:text-stone-950">Mapa</a>
             <a href="#/dlaczego-to-robimy" className="hover:text-stone-950">Dlaczego to robimy?</a>
+            <a href="#/jak-mozesz-pomoc" className="hover:text-stone-950">Jak możesz pomóc?</a>
           </nav>
         </div>
       </header>
@@ -466,12 +516,20 @@ export default function App() {
 Zbieranie i dokumentowanie stanowisk topoli — czarnej i białej.
 Stare, dojrzałe i zamierające drzewa w jednym miejscu.
           </p>
-          <button
-            className="mt-5 rounded-full border border-green-900/25 bg-green-900/10 px-5 py-2.5 text-sm font-semibold text-green-950 transition hover:bg-green-900/20"
-            onClick={() => navigate("/dlaczego-to-robimy")}
-          >
-            Dlaczego to robimy?
-          </button>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <button
+              className="rounded-full border border-green-900/25 bg-green-900/10 px-5 py-2.5 text-sm font-semibold text-green-950 transition hover:bg-green-900/20"
+              onClick={() => navigate("/dlaczego-to-robimy")}
+            >
+              Dlaczego to robimy?
+            </button>
+            <button
+              className="rounded-full border border-green-900/25 bg-green-900/10 px-5 py-2.5 text-sm font-semibold text-green-950 transition hover:bg-green-900/20"
+              onClick={() => navigate("/jak-mozesz-pomoc")}
+            >
+              Jak możesz pomóc?
+            </button>
+          </div>
         </div>
 
       </section>

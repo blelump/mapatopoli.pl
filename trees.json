@@ -5,9 +5,7 @@
     "lat": 49.987694,
     "lng": 20.887611,
     "status": "declining",
-    "photos": [
-      "/photos/pn-001/1.jpg"
-    ]
+    "photos": ["1.jpg"]
   },
   {
     "id": "pn-002",
@@ -15,11 +13,7 @@
     "status": "declining",
     "lat": 49.996222,
     "lng": 20.950806,
-    "photos": [
-      "/photos/pn-002/1.jpg",
-      "/photos/pn-002/2.jpg",
-      "/photos/pn-002/3.jpg"
-    ]
+    "photos": ["1.jpg", "2.jpg", "3.jpg"]
   },
   {
     "id": "pn-003",
@@ -27,8 +21,23 @@
     "status": "declining",
     "lat": 50.000611,
     "lng": 20.896861,
-    "photos": [
-      "/photos/pn-003/1.jpg"
-    ]
+    "photos": ["1.jpg"]
+  },
+  {
+    "id": "pn-004",
+    "species_code": "nigra",
+    "status": "healthy",
+    "lat": 50.035861,
+    "lng": 20.910806,
+    "photos": ["1.jpg"]
+  },
+  {
+    "id": "pn-005",
+    "species_code": "nigra",
+    "status": "healthy",
+    "lat": 49.868306,
+    "lng": 20.762167,
+    "notes": "Pomnik przyrody od 1933r(!)",
+    "photos": ["1.jpg", "2.jpg"]
   }
 ]

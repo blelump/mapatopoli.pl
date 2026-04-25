@@ -62,6 +62,37 @@
     "lat": 50.000278, "lng": 20.885583,
     "notes": "Ciekawe narośla a'la czeczotowe na korze",
     "photos": ["1.jpg", "2.jpg", "3.jpg"]
+  },
+  {
+    "id": "pn-008",
+    "species_code": "nigra",
+    "status": "declining",
+    "lat": 49.9938056,
+    "lng": 20.9565
+  },
+  {
+    "id": "pn-009",
+    "species_code": "nigra",
+    "status": "healthy",
+    "lat": 50.0008333, "lng": 20.8981389
+  },
+  {
+    "id": "pn-010",
+    "species_code": "nigra",
+    "status": "dead",
+    "lat": 50.0008056, "lng": 20.8978611
+  },
+  {
+    "id": "pn-011",
+    "species_code": "nigra",
+    "status": "declining",
+    "lat": 49.9998611, "lng": 20.8984167
+  },
+  {
+    "id": "pn-012",
+    "species_code": "nigra",
+    "status": "healthy",
+    "lat": 49.9998333, "lng": 20.8981389
   }
 
 ]

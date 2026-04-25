@@ -94,6 +94,30 @@
     line-height: 1.7;
   }
 
+  ul {
+    margin: 0.75em 0;
+    padding-left: 1.25em;
+    list-style: none;
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 1em;
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+  }
+
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(31, 91, 53, 0.5);
+  }
+
   code, .counter {
     font-family: var(--mono);
     display: inline-flex;

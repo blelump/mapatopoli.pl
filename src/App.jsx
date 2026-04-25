@@ -119,7 +119,15 @@ Topola czarna nie jest prawnie chroniona w Polsce. Jej populacje stają się cor
             Jeśli sądzisz, że znalazłeś drzewo, które może być topolą czarną lub białą, sfotografuj je, określ lokalizację (najprościej GPS z pinezki na Google Maps) i oceń jego kondycję.           </p>
           <h3>Dodawanie topoli do mapy</h3>
           <p>
-    Aktualnie strona nie posiada żadnego formularza, który pozwoliłby na automatyczną obsługę zgłoszenia dodania drzewa do mapy, ale jeśli zgłoszeń będzie dużo, to się o tym pomyśli. Póki co zostaje opcja poprzez <a href="https://github.com/blelump/mapatopoli.pl">Github</a> (zgłoś issue), gdzie strona obecnie jest hostowana.
+    Aktualnie strona nie posiada żadnego formularza, który pozwoliłby na automatyczną obsługę zgłoszenia dodania drzewa do mapy, ale jeśli zgłoszeń będzie dużo, to się o tym pomyśli. Póki co opcje są następujące:
+    <ul>
+    <li>
+      wyślij e-mail na adres hello@mapatopoli.pl
+    </li>
+    <li>
+      zgłoś issue poprzez <a href="https://github.com/blelump/mapatopoli.pl">Github</a> (obecnie strona jest tutaj hostowana)
+    </li>
+    </ul>
     <br/>
     <br/>
     Do dodania drzewa niezbędne będą:

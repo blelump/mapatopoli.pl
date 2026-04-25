@@ -66,6 +66,12 @@ body {
   background: radial-gradient(circle at top left, rgba(31, 91, 53, 0.10), transparent 34rem), linear-gradient(180deg, #f8f5ee 0%, #f4f1ea 100%);
 }
 
+@media (prefers-color-scheme: dark) {
+  #root {
+    background: radial-gradient(circle at top left, rgba(31, 91, 53, 0.15), transparent 34rem), linear-gradient(180deg, #16171d 0%, #1a1b22 100%);
+  }
+}
+
 h1,
 h2 {
   font-family: var(--heading);

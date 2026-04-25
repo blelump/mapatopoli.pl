@@ -61,8 +61,7 @@ function AboutPage() {
   return (
     <section className="px-3 py-12 md:px-6 md:py-20">
       <div className="mx-auto max-w-2xl">
-        <a href="#/" className="text-sm text-stone-500 hover:text-stone-950">← Mapa topoli</a>
-        <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">O co chodzi?</h1>
+        <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">Dlaczego to robimy?</h1>
         <div className="mt-8 space-y-6 text-base leading-7 text-stone-600 md:text-lg md:leading-8">
           <p>
             Ta strona powstała, by w jednym miejscu zebrać i udokumentować stanowiska topoli —
@@ -127,7 +126,9 @@ function normalizeTree(rawTree, index) {
     lng: toNumber(source.lng ?? source.lon ?? source.longitude),
     river_valley: String(source.river_valley ?? source.riverValley ?? "—"),
     notes: String(source.notes ?? "―"),
-    photos: Array.isArray(source.photos) ? source.photos.filter((p) => typeof p === "string") : [],
+    photos: Array.isArray(source.photos)
+      ? source.photos.filter((p) => typeof p === "string").map((p) => `/photos/${String(source.id ?? `tree-${index}`)}/${p}`)
+      : [],
   };
 }
 
@@ -438,12 +439,12 @@ export default function App() {
           </a>
           <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-stone-600">
             <a href="#/" className="hover:text-stone-950">Mapa</a>
-            <a href="#/o-co-chodzi" className="hover:text-stone-950">O co chodzi?</a>
+            <a href="#/dlaczego-to-robimy" className="hover:text-stone-950">Dlaczego to robimy?</a>
           </nav>
         </div>
       </header>
 
-      {route === "/o-co-chodzi" ? (
+      {route === "/dlaczego-to-robimy" ? (
         <AboutPage />
       ) : (
         <>
@@ -467,9 +468,9 @@ Stare, dojrzałe i zamierające drzewa w jednym miejscu.
           </p>
           <button
             className="mt-5 rounded-full border border-green-900/25 bg-green-900/10 px-5 py-2.5 text-sm font-semibold text-green-950 transition hover:bg-green-900/20"
-            onClick={() => navigate("/o-co-chodzi")}
+            onClick={() => navigate("/dlaczego-to-robimy")}
           >
-            O co chodzi?
+            Dlaczego to robimy?
           </button>
         </div>
 

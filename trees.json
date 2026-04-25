@@ -39,5 +39,29 @@
     "lng": 20.762167,
     "notes": "Pomnik przyrody od 1933r(!)",
     "photos": ["1.jpg", "2.jpg"]
+  },
+  {
+    "id": "pn-006",
+    "species_code": "nigra",
+    "status": "healthy",
+    "lat": 50.035556, "lng": 20.909306,
+    "notes": "Dziupla w odziomku",
+    "photos": ["1.jpg"]
+  },
+  {
+    "id": "pn-007",
+    "species_code": "nigra",
+    "status": "healthy",
+    "lat": 50.034444, "lng": 20.905972,
+    "photos": ["1.jpg"]
+  },
+  {
+    "id": "pa-001",
+    "species_code": "alba",
+    "status": "healthy",
+    "lat": 50.000278, "lng": 20.885583,
+    "notes": "Ciekawe narośla a'la czeczotowe na korze",
+    "photos": ["1.jpg", "2.jpg", "3.jpg"]
   }
+
 ]

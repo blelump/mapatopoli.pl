@@ -64,28 +64,28 @@ function AboutPage() {
         <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">Dlaczego to robimy?</h1>
         <div className="mt-8 space-y-6 text-base leading-7 text-stone-600 md:text-lg md:leading-8">
           <p>
-            Ta strona powstała, by w jednym miejscu zebrać i udokumentować stanowiska topoli —
-            czarnej i białej — rosnących w Polsce. Chodzi o drzewa dojrzałe, stare i zamierające,
-            które często nie mają żadnej formalnej ochrony, a są kluczowym elementem ekosystemów
-            rzecznych i lasów łęgowych.
+            Ta strona powstała, aby w jednym miejscu zebrać i udokumentować stanowiska topoli czarnej i białej rosnących w Polsce. Chodzi o drzewa dojrzałe, stare i zamierające, które zazwyczaj nie mają żadnej formalnej ochrony, a są kluczowym elementem ekosystemów rzecznych i lasów łęgowych.
+    <br/>
+    <br/>
+            Mapa ma ułatwić inwentaryzację, gdzie każdy może dodać stanowisko, przypisać mu status kondycji i dołączyć zdjęcia. W ten sposób powstaje wspólna, otwarta baza wiedzy o tych drzewach.
+    <br/><br/>
           </p>
-          <p>
-            Topola czarna (<em>Populus nigra</em>) to gatunek rodzimy, związany z dolinami
-            największych polskich rzek — Wisły, Odry, Warty, Bugu i Narwi. Jej populacje
-            kurczą się z powodu regulacji rzek, wycinki i presji urbanistycznej. Podobnie
-            topola biała (<em>Populus alba</em>), choć pospolitsza, traci swoje naturalne
-            siedliska.
-          </p>
-          <p>
-            Mapa ma ułatwić inwentaryzację — każdy może dodać stanowisko, przypisać mu
-            status kondycji i dołączyć zdjęcia. W ten sposób powstaje wspólna, otwarta baza
-            wiedzy o tych drzewach.
-          </p>
-          <p>
-            Projekt jest statyczny — nie wymaga serwera, backendu ani bazy danych. Wszystko
-            żyje w jednym pliku JSON i katalogach ze zdjęciami. Możesz go hostować gdziekolwiek,
-            a dane edytować zwykłym edytorem tekstu.
-          </p>
+    <h3>Topola czarna</h3>
+    <p>
+            Topola czarna (<em>Populus nigra</em>) to gatunek rodzimy, związany z dolinami największych polskich rzek. Jej populacje kurczą się z powodu regulacji rzek i przekształceniu dawnych lasów łęgowych w żyzne pola uprawne.
+    <br/>
+    <br/>
+    Szczególny problem, w zasadzie w skali kraju, jest z topolą czarną, gdzie obserwuje się zanikanie naturalnych siedlisk oraz krzyżowanie się z jej mieszańcami, sztucznie wyhodowanymi przez człowieka (Populus × canadensis Moench).<br />
+
+    <br/>
+    Poniżej cytat z pracy <a href="https://www.nature.com/articles/s41598-025-86994-w">"Genetic structure and divergence of marginal populations of black poplar (Populus nigra L.) in Poland"</a>, która wprost definiuje problem:
+    </p>
+    <blockquote>
+    Zazwyczaj obszary nadrzeczne są zamieszkane przez mieszankę gatunków liściastych przystosowanych do specyficznych warunków hydrologicznych i kontekstu ekologicznego każdego regionu. Powszechne gatunki występujące w Europie obejmują wierzby, topole, brzozy i olsze. Niektóre gatunki występują wyłącznie na obszarach zalewowych, takie jak topola czarna (Populus nigra L.), która tworzy naturalne zbiorowiska topolowe znane jako Salici-Populetum (las wierzbowo-topolowy) lub Populetum albae (las topolowy). [...] Jako takson pionierski o preferencji do światła słonecznego, zasiedla ona głównie populacje poprzez kolonizowanie otwartych przestrzeni na glebach aluwialnych różnymi sposobami, takimi jak nasiona, sadzonki lub fragmenty korzeni. Topola czarna jest znana ze swojego szybkiego wzrostu i łatwości rozmnażania wegetatywnego. Wydaje się również być wysoce plastyczna i odporna na zanieczyszczenie środowiska. Z tych powodów gatunek ten jest często wykorzystywany do ochrony gleby i fitoremediacji na obszarach zanieczyszczonych. Topola czarna była szeroko krzyżowana, co ułatwiło rozwój nowych, odpornych odmian topoli wykorzystywanych do zakładania plantacji drzew o krótkiej rotacji.<br/><br/>
+Żywotność populacji topoli czarnej w dużym stopniu zależy od dynamiki rzecznej, zwłaszcza od okresowych wezbrań, które są niezbędne dla naturalnej regeneracji tego gatunku. Chociaż topola czarna produkuje duże ilości nasion, które są łatwo przenoszone przez wiatr i wodę, są one krótkotrwałe i bardzo lekkie. Co najważniejsze, wymagają one specyficznych warunków środowiskowych oraz odsłoniętych, wilgotnych powierzchni do kiełkowania i dalszego wzrostu. W naturze takie warunki występują jedynie w wyniku późnowiosennych powodzi, kiedy uwalniane są nasiona. Działalność człowieka, taka jak osuszanie terenów podmokłych, regulacja rzek, wylesianie oraz intensywne użytkowanie terenów wzdłuż brzegów rzek, zmieniła dynamikę powodzi i spowodowała utratę naturalnych siedlisk topoli czarnej. <strong>Dlatego drzewo to stoi obecnie w obliczu zagrożenia wyginięciem i jest uznawane za gatunek zagrożony w wielu krajach europejskich.</strong><br />
+    [...]<br/>
+Topola czarna nie jest prawnie chroniona w Polsce. Jej populacje stają się coraz mniejsze, a większość drzew jest w zaawansowanym wieku i w złej kondycji zdrowotnej. Większe skupiska osobników nadal występują wzdłuż głównych dolin rzecznych, jednak gatunek ten osiąga północną granicę swojego zasięgu w kraju. Naturalna regeneracja poprzez rozmnażanie płciowe zachodzi niemal wyłącznie w środkowym biegu Wisły, która jest największą rzeką w Polsce. Najgorszą sytuację można zaobserwować wzdłuż dwóch najbardziej przekształconych dolin rzecznych, tj. Odry i Warty.
+    </blockquote>
         </div>
       </div>
     </section>

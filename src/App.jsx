@@ -508,7 +508,7 @@ export default function App() {
         <>
       <section
         id="o-gatunku"
-        className="grid gap-7 px-3 py-8 md:grid-cols-[1fr_360px] md:items-end md:px-6 md:py-12"
+        className="grid gap-7 px-3 py-8 md:grid-cols-[1fr_320px] md:items-center md:px-6 md:py-12"
       >
         <div>
           <div className="inline-flex rounded-full border border-green-900/15 bg-green-900/10 px-3 py-1.5 text-xs font-extrabold uppercase tracking-widest text-green-950">
@@ -540,6 +540,7 @@ Stare, dojrzałe i zamierające drzewa w jednym miejscu.
           </div>
         </div>
 
+        <img src="/tree.svg" alt="" className="hidden md:block w-full" />
       </section>
 
       <section id="mapa" className="w-full px-3 py-6 md:px-6">

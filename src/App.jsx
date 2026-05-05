@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
+import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import {
   LayersControl,
   MapContainer,
@@ -9,6 +9,9 @@ import {
 } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import Markdown from "react-markdown";
+import dlaczegoMd from "./content/dlaczego-to-robimy.md?raw";
+import jakMd from "./content/jak-mozesz-pomoc.md?raw";
 
 const { BaseLayer } = LayersControl;
 
@@ -70,79 +73,25 @@ function AboutPage() {
   return (
     <section className="px-3 py-12 md:px-6 md:py-20">
       <div className="mx-auto max-w-2xl">
-
-        <div className="mt-8 space-y-6 text-base leading-7 text-stone-600 md:text-lg md:leading-8">
-          <h1 id="dlaczego-to-robimy" className="text-4xl font-semibold tracking-tight md:text-5xl">Dlaczego to robimy?</h1>
-          <p>
-            Ta strona powstała, aby w jednym miejscu zebrać i udokumentować stanowiska topoli czarnej i białej rosnących w Polsce. Chodzi o drzewa dojrzałe, stare i zamierające, które zazwyczaj nie mają żadnej formalnej ochrony, a są kluczowym elementem ekosystemów rzecznych i lasów łęgowych.
-    <br/>
-    <br/>
-            Mapa ma ułatwić inwentaryzację, gdzie każdy może dodać stanowisko, przypisać mu status kondycji i dołączyć zdjęcia. W ten sposób powstaje wspólna, otwarta baza wiedzy o tych drzewach.
-    <br/><br/>
-          </p>
-    <h3>Topola czarna</h3>
-    <p>
-            Topola czarna (<em>Populus nigra</em>) to gatunek rodzimy, związany z dolinami największych polskich rzek. Jej populacje kurczą się z powodu regulacji rzek i przekształceniu dawnych lasów łęgowych w żyzne pola uprawne.
-    <br/>
-    <br/>
-    Szczególny problem, w zasadzie w skali kraju, jest z topolą czarną, gdzie obserwuje się zanikanie naturalnych siedlisk oraz krzyżowanie się z jej mieszańcami, sztucznie wyhodowanymi przez człowieka (Populus × canadensis Moench), nasadzanymi na terenie naszego kraju już w XVIII wieku(!).<br />
-
-    <br/>
-    Poniżej cytat z pracy <a href="https://www.nature.com/articles/s41598-025-86994-w">"Genetic structure and divergence of marginal populations of black poplar (Populus nigra L.) in Poland"</a>, która wprost definiuje problem:
-    </p>
-    <blockquote>
-    Zazwyczaj obszary nadrzeczne są zamieszkane przez mieszankę gatunków liściastych przystosowanych do specyficznych warunków hydrologicznych i kontekstu ekologicznego każdego regionu. Powszechne gatunki występujące w Europie obejmują wierzby, topole, brzozy i olsze. Niektóre gatunki występują wyłącznie na obszarach zalewowych, takie jak topola czarna (Populus nigra L.), która tworzy naturalne zbiorowiska topolowe znane jako Salici-Populetum (las wierzbowo-topolowy) lub Populetum albae (las topolowy). [...] Jako takson pionierski o preferencji do światła słonecznego, zasiedla ona głównie populacje poprzez kolonizowanie otwartych przestrzeni na glebach aluwialnych różnymi sposobami, takimi jak nasiona, sadzonki lub fragmenty korzeni. Topola czarna jest znana ze swojego szybkiego wzrostu i łatwości rozmnażania wegetatywnego. Wydaje się również być wysoce plastyczna i odporna na zanieczyszczenie środowiska. Z tych powodów gatunek ten jest często wykorzystywany do ochrony gleby i fitoremediacji na obszarach zanieczyszczonych. Topola czarna była szeroko krzyżowana, co ułatwiło rozwój nowych, odpornych odmian topoli wykorzystywanych do zakładania plantacji drzew o krótkiej rotacji.<br/><br/>
-Żywotność populacji topoli czarnej w dużym stopniu zależy od dynamiki rzecznej, zwłaszcza od okresowych wezbrań, które są niezbędne dla naturalnej regeneracji tego gatunku. Chociaż topola czarna produkuje duże ilości nasion, które są łatwo przenoszone przez wiatr i wodę, są one krótkotrwałe i bardzo lekkie. Co najważniejsze, wymagają one specyficznych warunków środowiskowych oraz odsłoniętych, wilgotnych powierzchni do kiełkowania i dalszego wzrostu. W naturze takie warunki występują jedynie w wyniku późnowiosennych powodzi, kiedy uwalniane są nasiona. Działalność człowieka, taka jak osuszanie terenów podmokłych, regulacja rzek, wylesianie oraz intensywne użytkowanie terenów wzdłuż brzegów rzek, zmieniła dynamikę powodzi i spowodowała utratę naturalnych siedlisk topoli czarnej. <strong>Dlatego drzewo to stoi obecnie w obliczu zagrożenia wyginięciem i jest uznawane za gatunek zagrożony w wielu krajach europejskich.</strong><br />
-    [...]<br/>
-Topola czarna nie jest prawnie chroniona w Polsce. Jej populacje stają się coraz mniejsze, a większość drzew jest w zaawansowanym wieku i w złej kondycji zdrowotnej. Większe skupiska osobników nadal występują wzdłuż głównych dolin rzecznych, jednak gatunek ten osiąga północną granicę swojego zasięgu w kraju. Naturalna regeneracja poprzez rozmnażanie płciowe zachodzi niemal wyłącznie w środkowym biegu Wisły, która jest największą rzeką w Polsce. Najgorszą sytuację można zaobserwować wzdłuż dwóch najbardziej przekształconych dolin rzecznych, tj. Odry i Warty.
-    </blockquote>
-          <h3>Podobne działania w innych krajach</h3>
-          <p>
-            Wielka Brytania podjęła się trudu zinwentaryzowania topoli czarnych, co z kolei pokazało skalę problemu. Oddolne ruchy społeczne, np. <a href="https://www.treesfordorset.co.uk/blackpopular">Trees of Dorset</a> organizują społeczności w celu nasadzeń klonów uzyskanych drogą wegetatywną.
-          </p>
+        <div id="dlaczego-to-robimy" className="mt-8 space-y-6 text-base leading-7 text-stone-600 md:text-lg md:leading-8">
+          <Markdown
+            components={{
+              h1: ({ children }) => <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">{children}</h1>,
+              blockquote: ({ children }) => <blockquote className="my-6 space-y-4 border-l-4 border-stone-300 pl-4 italic">{children}</blockquote>,
+            }}
+          >
+            {dlaczegoMd}
+          </Markdown>
         </div>
 
-        <div className="mt-16 space-y-6 text-base leading-7 text-stone-600 md:text-lg md:leading-8">
-          <h1 id="jak-mozesz-pomoc" className="text-4xl font-semibold tracking-tight md:text-5xl">Jak możesz pomóc?</h1>
-          <p>
-            Każde nowe stanowisko, które trafi na mapę, to kolejny krok do lepszego zrozumienia sytuacji topoli w Polsce. Nie potrzebujesz specjalistycznego sprzętu ani wykształcenia.
-          </p>
-          <h3>Jak rozpoznać topolę?</h3>
-          <p>
-            Rozpoznawanie topoli, zarówno białych i czarnych wymaga pewnego treningu i samozaparcia. Jednym z fascynujących aspektów tych topoli jest to, że jest ich tak dużo, a wyróżnione gatunki w botanice, jak właśnie rodzima topola biała i czarna, posiadają szereg mieszańców, które ogólnie rzecz biorąc nie upraszczają sprawy.
-    <br/>
-    <br/>
-            Bardzo dobrym źródłem wiedzy dostępnej online o topolach jest <a href="https://populusportal.pl/">ta strona</a> oraz <a href="https://www.drzewa.nk4.netmark.pl/index.php">ta strona</a>.
-          </p>
-          <h3>Znalazłeś topolę?</h3>
-          <p>
-            Jeśli sądzisz, że znalazłeś drzewo, które może być topolą czarną lub białą, sfotografuj je, określ lokalizację (najprościej GPS z pinezki na Google Maps) i oceń jego kondycję.           </p>
-          <h3>Dodawanie topoli do mapy</h3>
-          <p>
-    Aktualnie strona nie posiada żadnego formularza, który pozwoliłby na automatyczną obsługę zgłoszenia dodania drzewa do mapy, ale jeśli zgłoszeń będzie dużo, to się o tym pomyśli. Póki co opcje są następujące:
-    <ul>
-    <li>
-      wyślij e-mail na adres hello@mapatopoli.pl
-    </li>
-    <li>
-      zgłoś issue poprzez <a href="https://github.com/blelump/mapatopoli.pl">Github</a> (obecnie strona jest tutaj hostowana)
-    </li>
-    </ul>
-    <br/>
-    <br/>
-    Do dodania drzewa niezbędne będą:
-    <ul>
-    <li>
-    lokalizacja GPS,     </li>
-    <li>
-    opcjonalnie (lecz preferowane) zdjęcia oraz np. dodatkowe, interesujące uwagi
-
-    </li>
-    <li>
-    dodatkowe, interesujące uwagi
-    </li>
-    </ul>
-          </p>
+        <div id="jak-mozesz-pomoc" className="mt-16 space-y-6 text-base leading-7 text-stone-600 md:text-lg md:leading-8">
+          <Markdown
+            components={{
+              h1: ({ children }) => <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">{children}</h1>,
+            }}
+          >
+            {jakMd}
+          </Markdown>
         </div>
       </div>
     </section>
